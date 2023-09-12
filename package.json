@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prebuild": "node prebuild.js"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.0.8",
@@ -32,7 +33,7 @@
     "eslint-config-next": "13.4.19",
     "js-base64": "^3.7.5",
     "lucide-react": "^0.276.0",
-    "next": "13.4.19",
+    "next": "13.4.9",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -44,7 +45,6 @@
     "vaul": "^0.6.0"
   },
   "devDependencies": {
-    "@iconify/react": "^4.1.1",
-    "@netlify/plugin-nextjs": "4.37.4"
+    "@iconify/react": "^4.1.1"
   }
 }
