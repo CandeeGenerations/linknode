@@ -40,7 +40,7 @@ export default function Home() {
             <ShortnerButton />
             <Link
               target="_blank"
-              href="http://github.com/sujjeee/linknode"
+              href="http://github.com/candeegenerations/linknode"
               className={buttonVariants()}
             >
               <Github className="mr-2 h-4 w-4" />
