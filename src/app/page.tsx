@@ -37,7 +37,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-center items-center w-full ">
             <DemoData />
             <Publish />
-            <ShortnerButton />
+            <ShortenerButton />
             <Link
               target="_blank"
               href="http://github.com/candeegenerations/linknode"

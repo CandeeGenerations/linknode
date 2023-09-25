@@ -53,14 +53,15 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [`${siteConfig.url}/og-image.png`],
     siteName: siteConfig.name,
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: siteConfig.ogImage,
-    creator: '@sujjeeee',
+    images: [`${siteConfig.url}/og-image.png`],
+    creator: "@sujjeeee",
   },
   icons: {
     icon: '/favicon.ico',
