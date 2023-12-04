@@ -1,0 +1,3 @@
+setup:
+  project: linknode
+  config: dev
