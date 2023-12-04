@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import {
   Card,
   CardContent,
@@ -11,17 +10,18 @@ import {
 import { SocialInput } from '@/components/ui/social-input';
 import { useData } from '@/lib/context/link-context';
 import type { SocialLinkProviderProps } from '@/types';
+import React from 'react';
 
 const socialLinksProvider: SocialLinkProviderProps[] = [
-  { name: 'facebook', icon: 'ph:facebook-logo-duotone', id: 'f' },
-  { name: 'twitter', icon: 'ph:twitter-logo-duotone', id: 't' },
-  { name: 'instagram', icon: 'ph:instagram-logo-duotone', id: 'ig' },
-  { name: 'telegram', icon: 'ph:telegram-logo-duotone', id: 'tg' },
-  { name: 'youtube', icon: 'ph:youtube-logo-duotone', id: 'y' },
-  { name: 'email', icon: 'ph:envelope-duotone', id: 'e' },
-  { name: 'github', icon: 'ph:github-logo-duotone', id: 'gh' },
-  { name: 'linkedin', icon: 'ph:linkedin-logo-duotone', id: 'l' },
-  { name: 'whatsapp', icon: 'ph:whatsapp-logo-duotone', id: 'w' },
+  { name: 'facebook', icon: 'mdi:facebook', id: 'f' },
+  { name: 'twitter', icon: 'mdi:twitter', id: 't' },
+  { name: 'instagram', icon: 'mdi:instagram', id: 'ig' },
+  { name: 'telegram', icon: 'mdi:telegram', id: 'tg' },
+  { name: 'youtube', icon: 'mdi:youtube', id: 'y' },
+  { name: 'email', icon: 'mdi:envelope', id: 'e' },
+  { name: 'github', icon: 'mdi:github', id: 'gh' },
+  { name: 'linkedin', icon: 'mdi:linkedin', id: 'l' },
+  { name: 'whatsapp', icon: 'mdi:whatsapp', id: 'w' },
 ];
 
 type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;

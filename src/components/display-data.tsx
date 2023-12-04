@@ -1,11 +1,10 @@
 'use client';
 
-import React from 'react';
-import { Icon } from '@iconify/react';
-import { ImageIcon } from 'lucide-react';
-import type { DisplayDataProps } from '@/types';
 import ExtraLinksCard from '@/components/extra-links-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import type { DisplayDataProps } from '@/types';
+import { Icon } from '@iconify/react';
+import { ImageIcon } from 'lucide-react';
 
 export default function DisplayData({ acc }: DisplayDataProps) {
   const allSocialLinksAreEmpty =
@@ -20,15 +19,15 @@ export default function DisplayData({ acc }: DisplayDataProps) {
     !acc.l;
 
   const iconMap: Record<string, string> = {
-    f: 'ph:facebook-logo-duotone',
-    t: 'ph:twitter-logo-duotone',
-    ig: 'ph:instagram-logo-duotone',
-    tg: 'ph:telegram-logo-duotone',
-    w: 'ph:whatsapp-logo-duotone',
-    y: 'ph:youtube-logo-duotone',
-    e: 'ph:envelope-duotone',
-    gh: 'ph:github-logo-duotone',
-    l: 'ph:linkedin-logo-duotone',
+    f: 'mdi:facebook',
+    t: 'mdi:twitter',
+    ig: 'mdi:instagram',
+    tg: 'mdi:telegram',
+    w: 'mdi:whatsapp',
+    y: 'mdi:youtube',
+    e: 'mdi:envelope',
+    gh: 'mdi:github',
+    l: 'mdi:linkedin',
   };
 
   return (
