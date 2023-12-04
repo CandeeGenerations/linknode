@@ -1,11 +1,14 @@
-import '../styles/globals.css'
-import type {Metadata} from 'next'
-import {Inter} from 'next/font/google'
-import {siteConfig} from './page'
-import {Providers} from '@/components/Provider'
-import {Analytics} from '@vercel/analytics/react'
+import '@/styles/globals.css';
+import type { Metadata, Viewport } from 'next';
+import { siteConfig } from '@/app/page';
+import { Providers } from '@/components/providers';
+import { Analytics } from '@vercel/analytics/react';
+import { Inter } from 'next/font/google';
 
-const inter = Inter({subsets: ['latin']})
+export const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 // Original source: https://github.com/sadmann7/skateshop/blob/main/src/app/layout.tsx
 export const metadata: Metadata = {
@@ -20,21 +23,24 @@ export const metadata: Metadata = {
   },
   // added new keywords for seo
   keywords: [
-    "bitly url shortener",
-    "bitly link shortener",
-    "link shortener",
-    "url shortener",
-    "bitly link",
-    "tinyurls",
-    "bio for instagram",
-    "links",
-    "linknode",
-    "onelink",
-    "social links",
-    "free linktree",
-    "link in bio",
-    "link in bio instagram",
-    "linktree"
+    'bitly url shortener',
+    'bitly link shortener',
+    'link shortener',
+    'url shortener',
+    'link management',
+    'tinyurls',
+    'bio for instagram',
+    'linknode',
+    'link node',
+    'sujjeee',
+    'onelink',
+    'social links',
+    'free linktree',
+    'link in bio',
+    'link in bio instagram',
+    'linktree',
+    'dub.co',
+    'dub',
   ],
   authors: [
     {
@@ -43,10 +49,6 @@ export const metadata: Metadata = {
     },
   ],
   creator: 'sujjeee',
-  themeColor: [
-    {media: '(prefers-color-scheme: light)', color: 'white'},
-    {media: '(prefers-color-scheme: dark)', color: 'black'},
-  ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -61,14 +63,26 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og-image.png`],
-    creator: "@sujjeeee",
+    creator: '@sujjeeee',
   },
   icons: {
     icon: '/favicon.ico',
   },
-}
+};
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export const viewport: Viewport = {
+  colorScheme: 'dark light',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -76,5 +90,5 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

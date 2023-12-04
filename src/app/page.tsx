@@ -1,15 +1,14 @@
-import MobileMockup from '@/components/MobileMockup'
-import Background from '@/components/background/Background'
-import DemoData from '@/components/buttons/DemoData'
-import PreviewButton from '@/components/buttons/PreviewButton'
-import Publish from '@/components/buttons/Publish'
-import ShortenerButton from '@/components/buttons/ShortenerButton'
-import AdditionalLinksForm from '@/components/forms/AdditionalLinksForm'
-import ProfileForm from '@/components/forms/ProfileForm'
-import SocialLinksForm from '@/components/forms/SocialLinksForm'
-import {buttonVariants} from '@/components/ui/button'
-import {Github} from 'lucide-react'
-import Link from 'next/link'
+import React from 'react';
+import ExtraLinksForm from '@/components/forms/extra-links-form';
+import ProfileForm from '@/components/forms/profile-form';
+import SocialLinksForm from '@/components/forms/social-links-form';
+import MobileMockup from '@/components/mobile-mockup';
+import PreviewButton from '@/components/buttons/preview-button';
+import DemoButton from '@/components/buttons/demo-button';
+import PublishButton from '@/components/buttons/publish-button';
+import ShortenerButton from '@/components/buttons/shortener-button';
+import BackgroundShell from '@/components/backgrounds/background-shell';
+import GithubButton from '@/components/buttons/github-button';
 
 export const siteConfig = {
   name: 'CGen Links - one page, many links.',
@@ -25,32 +24,24 @@ export const siteConfig = {
 
 export default function Home() {
   return (
-    <main className="relative grid lg:grid-cols-3 h-screen px-2 lg:px-0 md:container">
-      <section className="lg:col-span-2 flex flex-col items-center justify-center py-6 lg:px-20 gap-6 h-screen">
-        <div className="overflow-y-auto w-full hide_scrollbar flex flex-col gap-5 pb-20 lg:pb-0">
+    <main className="relative grid h-screen px-2 md:container lg:grid-cols-3 lg:px-0">
+      <section className="flex h-screen flex-col items-center justify-center gap-6 py-6 lg:col-span-2 lg:px-20">
+        <div className="hide_scrollbar flex w-full flex-col gap-5 overflow-y-auto pb-[10vh] lg:pb-0">
           <ProfileForm />
           <SocialLinksForm />
-          <AdditionalLinksForm />
+          <ExtraLinksForm />
+          <BackgroundShell />
 
-          <Background />
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 justify-center items-center w-full ">
-            <DemoData />
-            <Publish />
+          <div className="grid w-full grid-cols-2 items-center justify-center gap-2 md:grid-cols-4 ">
+            <DemoButton />
+            <PublishButton />
             <ShortenerButton />
-            <Link
-              target="_blank"
-              href="http://github.com/candeegenerations/linknode"
-              className={buttonVariants()}
-            >
-              <Github className="mr-2 h-4 w-4" />
-              Github
-            </Link>
+            <GithubButton />
           </div>
         </div>
       </section>
 
-      <section className="hidden lg:flex justify-end items-center">
+      <section className="hidden items-center justify-end lg:flex">
         <MobileMockup />
       </section>
 
@@ -58,5 +49,5 @@ export default function Home() {
         <PreviewButton />
       </div>
     </main>
-  )
+  );
 }
