@@ -1,13 +1,6 @@
 'use client';
 
-import React from 'react';
-import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
-import { encodeData, isEmptyValues } from '@/lib/utils';
-import { useData } from '@/lib/context/link-context';
-import { Check, Copy, Send, Share2 } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { DialogClose } from '@radix-ui/react-dialog';
 import {
   Dialog,
   DialogContent,
@@ -17,6 +10,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { useData } from '@/lib/context/link-context';
+import { encodeData, isEmptyValues } from '@/lib/utils';
+import { DialogClose } from '@radix-ui/react-dialog';
+import { Check, Copy, Send, Share2 } from 'lucide-react';
+import React from 'react';
+import { toast } from 'sonner';
 
 export default function PublishButton() {
   const { data } = useData();
@@ -79,7 +79,7 @@ export default function PublishButton() {
                         window.location.origin
                       }/1?data=${encodeData(data)}`;
                       await navigator.share({
-                        title: `${data.n} - LinkNode`,
+                        title: `${data.n} - CGen Links`,
                         text: `Find all of ${data.n}'s links in one place.`,
                         url: inputLink,
                       });

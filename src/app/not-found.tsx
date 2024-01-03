@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import React from 'react';
 
 export default function NotFound() {
   return (
@@ -22,11 +21,11 @@ export default function NotFound() {
             />
           </svg>
         </p>
-        <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+        <h1 className="mt-3 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
           Opps! Page not found.
         </h1>
         <p className="mt-4 text-gray-500 dark:text-gray-400">
-          Organize your links with LinkNode and make them easy to find and
+          Organize your links with CGen Links and make them easy to find and
           share.
         </p>
         <div className="mt-6 flex w-full shrink-0 items-center justify-center gap-x-3 sm:w-auto">

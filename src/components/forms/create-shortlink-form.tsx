@@ -294,7 +294,7 @@ const CreateShortlinkForm = ({}) => {
                     placeholder={
                       error
                         ? (error.message as string)
-                        : 'https://linknode.vercel.app/1?data=eylaikaksps...'
+                        : 'https://links.cgen.cc/1?data=eylaikaksps...'
                     }
                     {...{
                       ...field,

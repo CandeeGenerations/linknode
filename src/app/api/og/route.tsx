@@ -1,6 +1,6 @@
-import { type NextRequest } from 'next/server';
-import type { ServerRuntime } from 'next';
 import { ImageResponse } from '@vercel/og';
+import type { ServerRuntime } from 'next';
+import { type NextRequest } from 'next/server';
 
 export const runtime: ServerRuntime = 'edge';
 
@@ -37,7 +37,8 @@ export function GET(req: NextRequest) {
             tw="flex px-8 text-6xl font-bold leading-tight tracking-tight"
             style={{ overflowWrap: 'break-word' }}
           >
-            {name}&#39;s - LinkNode
+            {name}
+            {name.endsWith('s') ? "'" : "'s"} - CGen Links
           </div>
         </div>
       ),
