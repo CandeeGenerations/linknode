@@ -31,17 +31,17 @@ export default function DisplayData({ acc }: DisplayDataProps) {
   };
 
   return (
-    <div className="hide_scrollbar mx-auto h-full w-full max-w-lg space-y-8 overflow-y-scroll p-2">
+    <div className="hide_scrollbar mx-auto size-full max-w-lg space-y-8 overflow-y-scroll p-2">
       <div className="z-50 text-center">
         {acc.i && (
-          <Avatar className="mx-auto h-20 w-20 overflow-hidden rounded-full ring ring-slate-200">
+          <Avatar className="mx-auto size-20 overflow-hidden rounded-full ring ring-slate-200">
             <AvatarImage
               src={acc.i}
               alt={`${acc.n}'s profile picture`}
-              className="h-full w-full object-cover"
+              className="size-full object-cover"
             />
             <AvatarFallback>
-              <ImageIcon className="h-8 w-8 text-gray-300" />
+              <ImageIcon className="size-8 text-gray-300" />
             </AvatarFallback>
           </Avatar>
         )}
@@ -63,7 +63,7 @@ export default function DisplayData({ acc }: DisplayDataProps) {
                   return (
                     <span className="p-1" key={key}>
                       <a href={`mailto:${value}`}>
-                        <Icon icon={propIcon} className="h-6 w-6" />
+                        <Icon icon={propIcon} className="size-6" />
                       </a>
                     </span>
                   );
@@ -82,7 +82,7 @@ export default function DisplayData({ acc }: DisplayDataProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Icon icon={propIcon} className="h-6 w-6" />
+                        <Icon icon={propIcon} className="size-6" />
                       </a>
                     </span>
                   );
@@ -90,7 +90,7 @@ export default function DisplayData({ acc }: DisplayDataProps) {
                   return (
                     <span className="p-1" key={key}>
                       <a href={value} target="_blank" rel="noopener noreferrer">
-                        <Icon icon={propIcon} className="h-6 w-6" />
+                        <Icon icon={propIcon} className="size-6" />
                       </a>
                     </span>
                   );
